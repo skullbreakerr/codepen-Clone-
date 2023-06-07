@@ -1,35 +1,37 @@
-import React from 'react';
+import React,{useState} from 'react';
 import 'codemirror/lib/codemirror.css';
 import 'codemirror/theme/material.css';
 import 'codemirror/mode/xml/xml';
 import 'codemirror/mode/javascript/javascript';
 import 'codemirror/mode/css/css';
-import { Controlled as ContorlledEditor } from 'react-codemirror2';
+import { Controlled as ControlledEditor } from 'react-codemirror2';
 
-export default function Editor(props) {
-  const { language, displayName, value, onchange } = props;
+function Editor(props) {
+  const { language, displayName, value, onchange, className } = props;
+  const [open,setOpen] = useState(true);
 
   function handleChange(editor, data, value) {
     onchange(value);
   }
   return (
-    <div className="editor-container">
+    <div className={`editor-container${open? '':'collapsed'}`}>
       <div className="editor-title">
         {displayName}
-        <button>O/C</button>
+        <button onclick={()=> setOpen(prevOpen =>!prevOpen)}>O/C</button>
       </div>
-      <ContorlledEditor
-        onBeforeChange={handleChange}
+      <ControlledEditor
         value={value}
-        className="code-mirror-wrapper"
+        className="code-mirror"
         options={{
           lineWrapping: true,
-          lint: true,
           mode: language,
           lineNumbers: true,
           theme: 'material',
         }}
+        onBeforeChange={handleChange}
       />
     </div>
   );
 }
+
+export default Editor;
