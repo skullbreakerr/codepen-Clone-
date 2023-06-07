@@ -1,0 +1,4 @@
+.pane {
+  display: flex;
+  background-color: hsl(30%, 12%, 25%);
+}
