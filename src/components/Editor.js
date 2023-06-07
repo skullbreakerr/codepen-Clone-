@@ -17,7 +17,9 @@ function Editor(props) {
     <div className={`editor-container${open? '':'collapsed'}`}>
       <div className="editor-title">
         {displayName}
-        <button onclick={()=> setOpen(prevOpen =>!prevOpen)}>O/C</button>
+        <button 
+        onClick={()=> setOpen(prevOpen =>!prevOpen)}
+        >O/C</button>
       </div>
       <ControlledEditor
         value={value}
