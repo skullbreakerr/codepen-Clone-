@@ -31,6 +31,7 @@ function Editor(props) {
           mode: language,
           lineNumbers: true,
           theme: 'material',
+          autoCloseBrackets:true,
         }}
         onBeforeChange={handleChange}
       />

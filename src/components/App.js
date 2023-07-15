@@ -1,6 +1,7 @@
 import React, { useState,useEffect } from 'react';
 import Editor from './Editor';
-import '../index.css'
+import '../index.css';
+import Nav from'./Nav';
 
 function App() {
   const [html, setHtml] = useState('');
@@ -22,6 +23,7 @@ function App() {
   },[html,css,js])
   return (
     <>
+      <Nav></Nav> 
       <div className="pane top-pane">
         <Editor
           language="xml"

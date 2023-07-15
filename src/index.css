@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@1,700&display=swap');
 body {
   margin: 0;
 }
@@ -6,10 +7,47 @@ body {
 }
 
 .pane {
-  height: 50vh;
+  height: 44vh;
   display: flex;
 }
 
+/* Navigation Bar */
+
+#navigation-bar{ 
+  height: 80px;
+  width: 100%;
+  color: #111;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding-right: 10px;
+} 
+
+div h1{
+  font-family: 'Victor Mono', monospace;
+  margin-left: -22px;
+}
+div img{
+  height: 50px;
+  position: relative;
+  padding-left: 2px;
+}
+
+#options{
+  display:flex;
+  width: 60%;
+  justify-content: right;
+  align-items: center;
+  gap: 60px;
+}
+
+h3{
+  border-left: #111 solid;
+  padding-left: 12px;
+}
+
+
+/* Editor Conntainer */
 .editor-container {
   flex-grow: 1;
   flex-basis: 0;
@@ -21,7 +59,6 @@ body {
 
 .editor-container.collapsed{
   flex-grow:0;
-
 }
 
 .editor-title {
@@ -42,4 +79,5 @@ body {
   border-bottom-right-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
   overflow:scroll;
-}
+  scroll-behavior: unset;
+} 
