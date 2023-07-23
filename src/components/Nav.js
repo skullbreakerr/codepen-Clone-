@@ -16,7 +16,7 @@ function Nav() {
     Mode
   </button>
   <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">C</a></li>
+    <li><a class="dropdown-item" href="./Clang.js">C</a></li>
     <li><a class="dropdown-item active" href="#">HTML/CSS/JS</a></li>
     <li><a class="dropdown-item" href="#">Java</a></li>
   </ul>

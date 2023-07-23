@@ -1,4 +1,10 @@
 import React, { useState,useEffect } from 'react';
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import ClangEditor from './ClangEditor.js';
+import AboutUs from './AboutUs.js';
+import ContactUs from './ContactUs';
 import Editor from './Editor';
 import '../index.css';
 import Nav from'./Nav';

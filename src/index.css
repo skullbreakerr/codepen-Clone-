@@ -14,18 +14,18 @@ body {
 /* Navigation Bar */
 
 #navigation-bar{ 
-  height: 80px;
+  height: 15vh;
   width: 100%;
   color: #111;
   display: flex;
   align-items: center;
-  gap: 40px;
-  padding-right: 10px;
+  gap: 5%;
+  padding-right: 1vw;
 } 
 
 div h1{
   font-family: 'Victor Mono', monospace;
-  margin-left: -22px;
+  margin-left: -3vw;
 }
 div img{
   height: 50px;
@@ -43,11 +43,12 @@ div img{
 
 h3{
   border-left: #111 solid;
-  padding-left: 12px;
+  padding-left: -1vw;
 }
 
 
-/* Editor Conntainer */
+/* Editor Container */
+
 .editor-container {
   flex-grow: 1;
   flex-basis: 0;
