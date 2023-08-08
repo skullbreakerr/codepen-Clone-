@@ -28,7 +28,7 @@ div h1{
   margin-left: -3vw;
 }
 div img{
-  height: 50px;
+  height: 9vmin;
   position: relative;
   padding-left: 2px;
 }
@@ -45,7 +45,6 @@ h3{
   border-left: #111 solid;
   padding-left: -1vw;
 }
-
 
 /* Editor Container */
 

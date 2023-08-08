@@ -2,7 +2,7 @@
 
 React Based CodePen clone for HTML, CSS & Javascript
 
-Developed By Dharmik Patel of Lazzy_coders group.
+Developed By Dharmik Patel of Lazzy_coders.
 
 Kindly fork the project to Modify the Code.
 
