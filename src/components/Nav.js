@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../index.css';
-
+import 'material-icons';
 function Nav() {
   return (
     <>
@@ -12,13 +12,13 @@ function Nav() {
               <h1>Codepen</h1>
             </a>
             <button
-              class="btn btn-primary"
+              class="btn"
               type="button"
               data-bs-toggle="offcanvas"
               data-bs-target="#offcanvasRight"
               aria-controls="offcanvasRight"
             >
-              Toggle right offcanvas
+              <span id="menu-btn"className="material-icons">menu</span>
             </button>
 
             <div
@@ -36,7 +36,16 @@ function Nav() {
                   aria-label="Close"
                 ></button>
               </div>
-              <div class="offcanvas-body">...</div>
+              <div class="offcanvas-body"><div class="dropdown mt-3">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+        Mode
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <li><a class="dropdown-item active" href="#">HTML/CSS/JS</a></li>
+        <li><a class="dropdown-item" href="#">C language</a></li>
+        <li><a class="dropdown-item" href="#">Python</a></li>
+      </ul>
+    </div></div>
             </div>
           </div>
         </nav>

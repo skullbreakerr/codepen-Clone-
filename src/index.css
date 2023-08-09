@@ -36,6 +36,10 @@ div img{
   padding-left: 2px;
 }
 
+button #menu-btn{
+  font-size: 8vmin;
+  color:solid black ;
+}
 
 #nav-option{
   display: flex;

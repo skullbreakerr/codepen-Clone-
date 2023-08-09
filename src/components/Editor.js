@@ -25,7 +25,7 @@ function Editor(props) {
       <div className="editor-title">
         {displayName}
         <button onClick={() => setOpen((prevOpen) => !prevOpen)}>
-          <span className="material-icons">expand</span>
+          <span className="material-icons">{open? "open_in_full":"close_fullscreen"}</span>
         </button>
       </div>
       <ControlledEditor
