@@ -5,9 +5,7 @@ import 'codemirror/mode/xml/xml';
 import 'codemirror/mode/javascript/javascript';
 import 'codemirror/mode/css/css';
 import { Controlled as ControlledEditor } from 'react-codemirror2';
-import {expand_content,close_fullscreen} from'https://fonts.googleapis.com/icon?family=Material+Icons';
-import GoogleIcon from './GoogleIcon.js';
-
+import 'material-icons';
 function Editor(props) {
   const { language, displayName, value, onchange, className } = props;
   const [open, setOpen] = useState(true);
@@ -27,7 +25,7 @@ function Editor(props) {
       <div className="editor-title">
         {displayName}
         <button onClick={() => setOpen((prevOpen) => !prevOpen)}>
-          <GoogleIcon iconName={open ? expand_content:close_fullscreen} />
+          <span className="material-icons">expand</span>
         </button>
       </div>
       <ControlledEditor

@@ -5,6 +5,7 @@
   "dependencies": {
     "bootstrap5": "^1.1.9",
     "codemirror": "^6.65.7",
+    "material-icons": "^1.13.9",
     "react": "^18.2.0",
     "react-codemirror2": "^7.2.1",
     "react-dom": "^18.2.0",

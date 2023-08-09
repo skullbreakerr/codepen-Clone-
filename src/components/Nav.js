@@ -47,22 +47,4 @@ function Nav() {
 
 export default Nav;
 
-{
-  /* 
-<div id="options">
-  
-<h3><div class="btn-group">
-<button class="btn btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-Mode
-</button>
-<ul class="dropdown-menu">
-<li><a class="dropdown-item" href="./Clang.js">C</a></li>
-<li><a class="dropdown-item active" href="#">HTML/CSS/JS</a></li>
-<li><a class="dropdown-item" href="#">Java</a></li>
-</ul>
-</div></h3>
-  
-  <h3 ><div class="btn btn-lg">Contact Us</div></h3>
-  <h3 ><div class="btn btn-lg">About Us</div></h3>
-</div> */
-}
+ 
