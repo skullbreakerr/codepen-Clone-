@@ -40,11 +40,23 @@ button #menu-btn{
   font-size: 8vmin;
   color:solid black ;
 }
-
+#nav-p-2{
+  margin-left:-40vmin;
+  /* background-color: aqua; */
+}
 #nav-option{
   display: flex;
+  align-items: center;
+  justify-content:start;
 }
-.container-fluid .resp-menu-btn{
+#nav-option .btn{
+  border-radius: 0;
+  border-left: solid 1px black;
+  font-size: 4vmin;
+  padding-left: 4vmin;
+  padding-right: 2vmin;
+}
+#resp-menu{
   display: none;
 }
 
