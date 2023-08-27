@@ -4,19 +4,29 @@ import 'codemirror/theme/material.css';
 import 'codemirror/mode/xml/xml';
 import 'codemirror/mode/javascript/javascript';
 import 'codemirror/mode/css/css';
+import 'codemirror/addon/hint/show-hint';
+// import 'codemirror/addon/hint/javascript-hint';
+// import 'codemirror/addon/hint/html-hint';
+// import 'codemirror/addon/hint/css-hint';
 import { Controlled as ControlledEditor } from 'react-codemirror2';
 import 'material-icons';
 function Editor(props) {
   const { language, displayName, value, onchange, className } = props;
   const [open, setOpen] = useState(true);
-  const option={
+  const option = {
+    autofocus: true,
     lineWrapping: true,
     mode: language,
     lineNumbers: true,
     theme: 'material',
-    extraKeys:{'Ctrl-space':'autocomplete'}
-  }
-
+    indentUnit: 2,
+    dragDrop: true,
+    lineWiseCopyCut:true,
+    // hintOptions:{
+    //   completeSingle:false,
+    // }
+  };
+    
   function handleChange(editor, data, value) {
     onchange(value);
   }
@@ -25,7 +35,9 @@ function Editor(props) {
       <div className="editor-title">
         {displayName}
         <button onClick={() => setOpen((prevOpen) => !prevOpen)}>
-          <span className="material-icons">{open? "open_in_full":"close_fullscreen"}</span>
+          <span className="material-icons">
+            {open ? 'open_in_full' : 'close_fullscreen'}
+          </span>
         </button>
       </div>
       <ControlledEditor

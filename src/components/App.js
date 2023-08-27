@@ -29,7 +29,7 @@ function App() {
       <Nav></Nav>
       <div className="pane top-pane">
         <Editor
-          language="xml"
+          language="hmlmixed"
           displayName="HTML"
           value={html}
           onchange={setHtml}
