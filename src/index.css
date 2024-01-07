@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@1,700&display=swap');
-
 body {
   margin: 0;
 }
+#container {
+  width: 100%;
+}
 .top-pane {
   background-color: hsl(225, 6%, 25%);
+  /* justify-content: space-around;  */
 }
-
 .pane {
   height: 44vh;
   display: flex;
@@ -20,69 +22,63 @@ body {
   color: #111;
   padding-right: 1vw;
 }  */
-nav div a{
+nav div a {
   display: flex;
 }
-nav div a h1{
+nav div a h1 {
   margin-left: 2vw;
   margin-top: 1vmin;
 }
-div h1{
+div h1 {
   font-family: 'Victor Mono', monospace;
   margin-left: -3vw;
 }
-div img{
+div img {
   height: 9vmin;
   position: relative;
   padding-left: 2px;
 }
 
-button #menu-btn{
+button #menu-btn {
   font-size: 8vmin;
-  color:solid black ;
+  color: solid black;
 }
-#nav-p-2{
-  margin-left:-40vmin;
+#nav-p-2 {
+  margin-left: -40vmin;
   /* background-color: aqua; */
 }
-#nav-option{
+#nav-option {
   display: flex;
   align-items: center;
-  justify-content:start;
+  justify-content: start;
 }
-#nav-option .btn{
+#nav-option .btn {
   border-radius: 0;
   border-left: solid 1px black;
   font-size: 4vmin;
   padding-left: 4vmin;
   padding-right: 2vmin;
 }
-#resp-menu{
+#resp-menu {
   display: none;
 }
 
-@media (max-width:768px){
-  #resp-menu{
+@media (max-width: 768px) {
+  #resp-menu {
     display: block;
   }
-  #nav-option{
-    display:none;
+  #nav-option {
+    display: none;
   }
 }
 
 /* Editor Container */
 
 .editor-container {
-  flex-grow: 1;
-  flex-basis: 0;
   display: flex;
   flex-direction: column;
   padding: 0.5rem;
   background-color: hsl(225, 6%, 25%);
-}
-
-.editor-container.collapsed{
-  flex-grow:0;
 }
 
 .editor-title {
@@ -94,14 +90,52 @@ button #menu-btn{
   border-top-right-radius: 0.5rem;
   border-top-left-radius: 0.5rem;
 }
-
+/* 
 .CodeMirror {
   height: 100% !important;
-}
-.code-mirror{
-  flex-grow: 1;
+} */
+
+.code-mirror {
   border-bottom-right-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
-  overflow:scroll;
-  scroll-behavior: unset;
-} 
+  overflow: hidden;
+  resize: horizontal;
+}
+
+.output {
+  background-color: rgb(27, 26, 26);
+  color: rgb(255, 255, 255);
+}
+/* Programming Language(PL) Editor */
+.container {
+  width: 100vh;
+  height: 100vh;
+  display: flex;
+  background-color: rgb(27, 24, 24);
+}
+.output {
+  display: flex;
+  flex-direction: column;
+}
+.label {
+  background-color: aliceblue;
+  color: tomato;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.editor {
+  margin-top: 0%;
+  height: fit-content;
+  flex-grow: 1;
+  flex-basis: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+.edit {
+  height: 8 0vh;
+}
