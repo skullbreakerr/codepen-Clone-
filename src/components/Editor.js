@@ -1,53 +1,46 @@
 import React, { useState } from 'react';
-import 'codemirror/lib/codemirror.css';
-import 'codemirror/theme/material.css';
-import 'codemirror/mode/xml/xml';
-import 'codemirror/mode/javascript/javascript';
-import 'codemirror/mode/css/css';
-import 'codemirror/addon/hint/show-hint';
-// import 'codemirror/addon/hint/javascript-hint';
-// import 'codemirror/addon/hint/html-hint';
-// import 'codemirror/addon/hint/css-hint';
-import { Controlled as ControlledEditor } from 'react-codemirror2';
-import 'material-icons';
+import AceEditor from 'react-ace';
+import 'ace-builds/src-noconflict/mode-javascript';
+import 'ace-builds/src-noconflict/mode-xml';
+import 'ace-builds/src-noconflict/mode-css';
+import 'ace-builds/src-noconflict/theme-monokai';
+
 function Editor(props) {
-  const { language, displayName, value, onchange, className } = props;
-  const [open, setOpen] = useState(true);
+ const { language, displayName, value, onchange, className } = props;
+ const [open, setOpen] = useState(true);
+
+ function handleAceChange(newValue, event, editor) {
+    onchange(newValue);
+ }
   const option = {
-    autofocus: true,
-    lineWrapping: true,
-    mode: language,
-    lineNumbers: true,
-    theme: 'material',
-    indentUnit: 2,
-    dragDrop: true,
-    lineWiseCopyCut:true,
-    // hintOptions:{
-    //   completeSingle:false,
-    // }
-  };
-    
-  function handleChange(editor, data, value) {
-    onchange(value);
+    enableBasicAutocompletion: true,
+    enableLiveAutocompletion: true,
+    enableSnippets: false,
+    showLineNumbers: true,
+    tabSize: 1,
   }
-  return (
-    <div className={`editor-container${open ? '' : 'collapsed'}`}>
+
+ return (
+    <div className={`editor-container`}>
       <div className="editor-title">
         {displayName}
-        <button onClick={() => setOpen((prevOpen) => !prevOpen)}>
-          <span className="material-icons">
-            {open ? 'open_in_full' : 'close_fullscreen'}
-          </span>
-        </button>
       </div>
-      <ControlledEditor
+      <AceEditor
         value={value}
         className="code-mirror"
-        options={option}
-        onBeforeChange={handleChange}
+        mode={language}
+        theme="monokai"
+        name="code-editor"
+        editorProps={{ $blockScrolling: true }}
+        onChange={handleAceChange}
+        fontSize={14}
+        showPrintMargin={true}
+        showGutter={true}
+        highlightActiveLine={true}
+        setOptions={option}
       />
     </div>
-  );
+ );
 }
 
 export default Editor;
