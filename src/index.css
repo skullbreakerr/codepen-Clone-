@@ -20,9 +20,17 @@ body {
     overflow-x: scroll;
     scroll-behavior: smooth;
   }
+  .pane{
+    width: 100%;
+  }
   .code-mirror{
-    /* max-width: 98vmin; */
-    min-width: 80vmax;
+    max-width: 95vmin;
+  }
+  /* .editor-title{
+    max-width: 80%;
+  } */
+  .editor-container{
+    margin-bottom: 2vmin;
   }
 }
 
