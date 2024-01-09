@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Editor from '../components/Editor';
 
 const HomePage = () => {
+  const[onTrue,setOnTrue]=useState(true)
   const [html, setHtml] = useState(`<div id="counter">0</div>
 <button id="increment-button">INCREMENT</button>`);
   const [css, setcss] = useState(`*{

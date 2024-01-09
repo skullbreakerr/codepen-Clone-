@@ -25,11 +25,9 @@ body {
   }
   .code-mirror{
     max-width: 95vmin;
-  }
-  /* .editor-title{
-    max-width: 80%;
-  } */
+  } 
   .editor-container{
+    margin-top: 2vmin;
     margin-bottom: 2vmin;
   }
 }
@@ -57,8 +55,7 @@ div img {
   height: 9vmin;
   position: relative;
   padding-left: 2px;
-}
-
+} 
 button #menu-btn {
   font-size: 8vmin;
   color: solid black;
