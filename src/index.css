@@ -2,9 +2,7 @@
 body {
   margin: 0;
 }
-#container {
-  width: 100%;
-}
+
 .top-pane {
   background-color: hsl(225, 6%, 25%);
   /* justify-content: space-around;  */
@@ -12,6 +10,20 @@ body {
 .pane {
   height: 44vh;
   display: flex;
+}
+
+@media (max-width:768px){
+  #container {
+    width: 100%;
+  }
+  .top-pane{
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+  }
+  .code-mirror{
+    /* max-width: 98vmin; */
+    min-width: 80vmax;
+  }
 }
 
 /* Navigation Bar */
@@ -89,19 +101,21 @@ button #menu-btn {
   padding: 0.5rem 0.5rem 0.5rem 1rem;
   border-top-right-radius: 0.5rem;
   border-top-left-radius: 0.5rem;
-}
-/* 
-.CodeMirror {
-  height: 100% !important;
-} */
+} 
 
+@media (max-width:1400px) and (min-width:769px){
+  .code-mirror{
+    max-width: 70vmin;
+    min-width: 45vmin;
+  }
+} 
 .code-mirror {
   border-bottom-right-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
   overflow: hidden;
-  resize: horizontal;
+  /* flex: 1; */
+  /* resize: horizontal; */
 }
-
 .output {
   background-color: rgb(27, 26, 26);
   color: rgb(255, 255, 255);
