@@ -34,6 +34,16 @@ body{
 });`);
   const [srcDoc, setSrcDoc] = useState('');
   useEffect(() => {
+    // const savedHtml=localStorage.getItem("HTML");
+    // const savedCss=localStorage.getItem("CSS");
+    // const savedJs=localStorage.getItem("JS");
+
+    // if(savedHtml && savedCss && savedJs){
+    //   setHtml(JSON.parse(savedHtml));
+    //   setcss(JSON.parse(savedCss));
+    //   setjs(JSON.parse(savedJs));
+    // }
+
     const timeout = setTimeout(() => {
       setSrcDoc(`
      <html>
@@ -45,7 +55,7 @@ body{
     return () => {
       clearTimeout(timeout);
     };
-    
+
   }, [html, css, js]);
   return (
     <>

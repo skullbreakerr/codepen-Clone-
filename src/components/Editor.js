@@ -7,13 +7,21 @@ import 'ace-builds/src-noconflict/theme-monokai';
 
 function Editor(props) {
  const { language, displayName, value, onchange, className } = props;
- const [open, setOpen] = useState(true);
+ const [open, setOpen] = useState(false);
  
+//  useEffect(()=>{
+//   const savedFile= localStorage.getItem(displayName)
+//   if(savedFile){
+//     value= JSON.parse(displayName)
+//   }
+//  },[])
  
  function handleAceChange(newValue, event, editor) {
-    onchange(newValue);
-    localStorage.setItem(displayName,JSON.stringify(newValue))
- }
+  onchange(newValue);
+  localStorage.setItem(displayName,JSON.stringify(value))
+  setOpen(true)
+}
+
 
 //  useEffect(()=>{
 //   if(localStorage.getItem(displayName)){
