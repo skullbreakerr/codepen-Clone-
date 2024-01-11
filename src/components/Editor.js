@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect ,useState } from 'react';
 import AceEditor from 'react-ace';
 import 'ace-builds/src-noconflict/mode-javascript';
 import 'ace-builds/src-noconflict/mode-xml';
@@ -8,10 +8,18 @@ import 'ace-builds/src-noconflict/theme-monokai';
 function Editor(props) {
  const { language, displayName, value, onchange, className } = props;
  const [open, setOpen] = useState(true);
-
+ 
+ 
  function handleAceChange(newValue, event, editor) {
     onchange(newValue);
+    localStorage.setItem(displayName,JSON.stringify(newValue))
  }
+
+//  useEffect(()=>{
+//   if(localStorage.getItem(displayName)){
+//     value=JSON.parse(displayName)
+//   }
+//  },[])
   const option = {
     enableBasicAutocompletion: true,
     enableLiveAutocompletion: true,
