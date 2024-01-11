@@ -10,13 +10,13 @@ function Editor(props) {
  const [open, setOpen] = useState(false);
  
 //  useEffect(()=>{
-//   const savedFile= localStorage.getItem(displayName)
+//   var savedFile= localStorage.getItem('displayName')
 //   if(savedFile){
 //     value= JSON.parse(displayName)
 //   }
 //  },[])
  
- function handleAceChange(newValue, event, editor) {
+function handleAceChange(newValue, event, editor) {
   onchange(newValue);
   localStorage.setItem(displayName,JSON.stringify(value))
   setOpen(true)
