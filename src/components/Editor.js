@@ -21,13 +21,7 @@ function handleAceChange(newValue, event, editor) {
   localStorage.setItem(displayName,JSON.stringify(value))
   setOpen(true)
 }
-
-
-//  useEffect(()=>{
-//   if(localStorage.getItem(displayName)){
-//     value=JSON.parse(displayName)
-//   }
-//  },[])
+ 
   const option = {
     enableBasicAutocompletion: true,
     enableLiveAutocompletion: true,
