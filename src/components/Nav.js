@@ -65,7 +65,7 @@ function Nav() {
             </button>
 
             <div
-              class="offcanvas offcanvas-end"
+              class="offcanvas offcanvas-end dark"
               tabindex="-1"
               id="offcanvasRight"
               aria-labelledby="offcanvasRightLabel"

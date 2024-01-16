@@ -5,9 +5,8 @@ import Nav from './components/Nav';
 import './index.css';
 import HomePage from './pages/HomePage';
 import NotFound from './pages/NotFound';
-import ContactUs from './pages/ContactUs';
 import PLEditor from './pages/CLanguage';
-
+import ContactUs from './pages/ContactUs' 
 export function App() {
   
   return (

@@ -12,21 +12,21 @@ body {
   display: flex;
 }
 
-@media (max-width:768px){
+@media (max-width: 768px) {
   #container {
     width: 100%;
   }
-  .top-pane{
+  .top-pane {
     overflow-x: scroll;
     scroll-behavior: smooth;
   }
-  .pane{
+  .pane {
     width: 100%;
   }
-  .code-mirror{
+  .code-mirror {
     max-width: 95vmin;
-  } 
-  .editor-container{
+  }
+  .editor-container {
     margin-top: 2vmin;
     margin-bottom: 2vmin;
   }
@@ -55,7 +55,7 @@ div img {
   height: 9vmin;
   position: relative;
   padding-left: 2px;
-} 
+}
 button #menu-btn {
   font-size: 8vmin;
   color: solid black;
@@ -106,14 +106,14 @@ button #menu-btn {
   padding: 0.5rem 0.5rem 0.5rem 1rem;
   border-top-right-radius: 0.5rem;
   border-top-left-radius: 0.5rem;
-} 
+}
 
-@media (max-width:1400px) and (min-width:769px){
-  .code-mirror{
+@media (max-width: 1400px) and (min-width: 769px) {
+  .code-mirror {
     max-width: 70vmin;
     min-width: 45vmin;
   }
-} 
+}
 .code-mirror {
   border-bottom-right-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
