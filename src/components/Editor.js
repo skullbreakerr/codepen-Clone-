@@ -1,4 +1,5 @@
 import React, { useEffect ,useState } from 'react';
+import '../index.css';
 import AceEditor from 'react-ace';
 import 'ace-builds/src-noconflict/mode-javascript';
 import 'ace-builds/src-noconflict/mode-xml';
@@ -7,7 +8,6 @@ import 'ace-builds/src-noconflict/theme-monokai';
 
 function Editor(props) {
  const { language, displayName, value, onchange, className } = props;
- const [open, setOpen] = useState(false);
  
 //  useEffect(()=>{
 //   var savedFile= localStorage.getItem('displayName')
@@ -18,8 +18,6 @@ function Editor(props) {
  
 function handleAceChange(newValue, event, editor) {
   onchange(newValue);
-  localStorage.setItem(displayName,JSON.stringify(value))
-  setOpen(true)
 }
  
   const option = {
