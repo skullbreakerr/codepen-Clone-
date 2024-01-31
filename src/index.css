@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@1,700&display=swap');
+
+main{
+  background-color: hsl(225, 6%, 10%);
+}
+
 body {
   margin: 0;
 }

@@ -12,12 +12,14 @@ export function App() {
   return (
     <>
       <Nav />
+      <main>
       <Routes>
         <Route path='*' element={<NotFound />} />
         <Route path='/' element={<HomePage />} />
         <Route path='/contact-us' element={<ContactUs />} />
         <Route path='/c-language' element={<PLEditor />} />
       </Routes>
+      </main>
     </>
   );
 }
