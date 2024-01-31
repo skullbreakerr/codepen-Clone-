@@ -7,6 +7,7 @@ body {
   background-color: hsl(225, 6%, 25%);
   /* justify-content: space-around;  */
 }
+
 .pane {
   height: 44vh;
   display: flex;
@@ -40,6 +41,7 @@ body {
   color: #111;
   padding-right: 1vw;
 }  */
+
 nav div a {
   display: flex;
 }
@@ -159,26 +161,3 @@ button #menu-btn {
   height: 8 0vh;
 }
 
-@media (max-width:600px){
-FormControl{
-  margin-bottom: 2vh;
-}
-}
-
-@media (max-width:768px){
-  FormControl{
-    margin-bottom: 4vh;
-  }
-}
-
-@media (max-width:992px){
-  FormControl{
-    margin-bottom: 6vh;
-  }
-}
-
-@media (max-width:1200px){
-  FormControl{
-    margin-bottom: 8vh;
-  }
-}

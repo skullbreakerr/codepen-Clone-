@@ -19,19 +19,17 @@ function PLEditor({code,onchange}) {
   return (
     <>
       <ChakraProvider>
-        <Box>
         <Button onClick={()=> showAlert()} ml="80%"  bg="hsl(225, 6%, 10%)" color="brown"  _hover={{ bg:"black"}}>Run</Button>
-          <Box bg="" display="flex" h="44vh" >
+          <Box display="flex" h="75vh" width="100%">
             <Editor
               language="c"
               displayName="C"
               value={code}
             />
-          </Box>
-          <Box display="flex" h="30vh" w="25vh">
-          <IO input={code} />
+           </Box>
+          <Box display="flex"  h={{base:"54vh"}} w="100%">  
+            <IO input={code} />
           </Box>  
-        </Box>
       </ChakraProvider>
     </>
   );
@@ -42,12 +40,14 @@ function IO(props) {
   const [input, setInput] = useState('');
   return (
     <>
+      <ChakraProvider>
       <Editor
         language="output"
         displayName="Output :"
         value={output}
         theme="material"
       />
+      </ChakraProvider>
     </>
   );
 }
